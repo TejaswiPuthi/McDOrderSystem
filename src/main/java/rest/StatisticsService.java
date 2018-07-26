@@ -1,4 +1,4 @@
-package main.java.api;
+package main.java.rest;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -22,7 +22,7 @@ public class StatisticsService {
 	@Produces("application/json")
 	public List<Product> productList(){
 		ProductOrdersList orderList = new ProductOrdersList();
-		System.out.println(orderList.getProductOrderList());
+//		System.out.println(orderList.getProductOrderList());
 		return(orderList.getProductOrderList());
 	}
 	
@@ -43,7 +43,7 @@ public class StatisticsService {
 		LinkedHashMap<String, String> result = 
                 new LinkedHashMap<String, String>();
 //		result.put("gender",null);
-		System.out.println("in method");
+//		System.out.println("in method");
 		result.put("gender", null);
 //		result.append("gender", null);
 		int order8to9=0,order9to10=0,order10to11=0,order11to12=0,order12to13=0,order13to14=0,order14to15=0,order15to16=0,
@@ -69,7 +69,7 @@ public class StatisticsService {
 			if(hours<22 && hours>=21) order21to22++;
 		}
 		int size = ordersList.size();
-		System.out.println("size: "+size);
+//		System.out.println("size: "+size);
 		if(size == 0) {
 			result.put("orders","No orders yet");
 		}

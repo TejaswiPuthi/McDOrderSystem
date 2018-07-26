@@ -9,11 +9,11 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import main.java.api.Customer;
-import main.java.api.CustomerList;
-import main.java.api.OnlineOfflineLogic;
-import main.java.api.OrderService;
-import main.java.api.ProductOrdersList;
+import main.java.rest.Customer;
+import main.java.rest.CustomerList;
+import main.java.rest.OnlineOfflineLogic;
+import main.java.rest.OrderService;
+import main.java.rest.ProductOrdersList;
 
 class OnlineOfflineTest {
 

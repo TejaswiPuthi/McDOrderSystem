@@ -1,4 +1,4 @@
-package main.java.api;
+package main.java.rest;
 
 import java.io.IOException;
 import java.util.Date;

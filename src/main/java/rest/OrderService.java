@@ -1,4 +1,4 @@
-package main.java.api;
+package main.java.rest;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -37,8 +37,8 @@ public class OrderService {
 	@POST
 	public Result onlineOrder(@FormParam("CustomerDeliveryInformation") String customerDelivery) {
 		
-	System.out.println("tejasw");
-	System.out.println(customerDelivery.getClass());
+//	System.out.println("tejasw");
+//	System.out.println(customerDelivery.getClass());
 	//check if the customer is valid customer
 	
 	
@@ -58,7 +58,7 @@ public class OrderService {
 //			System.out.println("valid");
 			calendar.setTime(date);
 			int current_hour = calendar.get(Calendar.HOUR_OF_DAY);
-			System.out.println(date);
+//			System.out.println(date);
 			if(current_hour > 8 && current_hour <10) {
 				if(logic.ifValidCoupon()) {
 					int order_id = logic.addCustomerOrder(date,"Online");
@@ -104,14 +104,14 @@ public class OrderService {
 		if(logic.ifValidCustomer()) {
 			calendar.setTime(date);
 			int current_hour = calendar.get(Calendar.HOUR_OF_DAY);
-			System.out.println(date);
-			System.out.println(current_hour); 
+//			System.out.println(date);
+//			System.out.println(current_hour); 
 			if(current_hour > 8 && current_hour <10) {	
 					result.setCode(400);
 					result.setMessage("Offline Orders not accepted at this moment");
 					return result;
 			}
-			else if (current_hour >= 10 && current_hour <24) {
+			else if (current_hour >= 10 && current_hour <22) {
 				if(!logic.ifValidCoupon()) {
 					int order_id = logic.addCustomerOrder(date,"Offline");
 					logic.addProductOrder();

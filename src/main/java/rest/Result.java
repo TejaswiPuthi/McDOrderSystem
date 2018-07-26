@@ -1,4 +1,4 @@
-package main.java.api;
+package main.java.rest;
 
 public class Result {
 	

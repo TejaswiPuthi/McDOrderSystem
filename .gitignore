@@ -23,3 +23,7 @@ proguard/
 # Log Files
 *.log
 
+#target files
+
+target/
+

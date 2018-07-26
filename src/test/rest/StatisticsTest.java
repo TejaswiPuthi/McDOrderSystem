@@ -13,7 +13,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import main.java.api.*;
+import main.java.rest.*;
 
 class StatisticsTest {
 	StatisticsService statisticsTest = new StatisticsService();

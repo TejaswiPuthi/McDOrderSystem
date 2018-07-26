@@ -1,4 +1,4 @@
-package main.java.api;
+package main.java.rest;
 
 import java.util.Date;
 import java.util.List;
